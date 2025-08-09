@@ -22,7 +22,9 @@ class HomePage extends StatelessWidget {
       body: GridView.builder(
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 2,
-          childAspectRatio: 0.5,
+          childAspectRatio: 1.5,
+          mainAxisSpacing: 60,
+          crossAxisSpacing: 15,
         ),
         itemBuilder: (context, builder) {
           return CustomCard();

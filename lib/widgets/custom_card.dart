@@ -30,7 +30,7 @@ class CustomCard extends StatelessWidget {
                     'backpack',
                     style: TextStyle(color: Colors.grey, fontSize: 16),
                   ),
-                  SizedBox(height: 10),
+                  SizedBox(height: 5),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -44,9 +44,9 @@ class CustomCard extends StatelessWidget {
           ),
         ),
         Positioned(
-          top: -80,
-          right: 0,
-          child: Image.asset('assets/1.png', height: 180),
+          top: -60,
+          right: 10,
+          child: Image.asset('assets/1.png', height: 140),
         ),
       ],
     );
