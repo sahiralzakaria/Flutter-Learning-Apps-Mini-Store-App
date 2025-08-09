@@ -12,6 +12,7 @@ class CustomCard extends StatelessWidget {
       onTap: () {
         Navigator.pushNamed(context, UpdateProductPage.id, arguments: product);
       },
+
       child: Stack(
         clipBehavior: Clip.none,
         children: [

@@ -64,7 +64,7 @@ class _UpdateProductPageState extends State<UpdateProductPage> {
                 CustomTextField(
                   hint: 'Image',
                   onChanged: (data) {
-                    productName = data;
+                    image = data;
                   },
                 ),
                 SizedBox(height: 50),
@@ -72,17 +72,24 @@ class _UpdateProductPageState extends State<UpdateProductPage> {
                   color: Colors.deepPurple,
                   text: "Update",
                   onTap: () async {
-                    isLoading = true;
-                    await updateProduct(product);
-                    setState(() {});
-                    try {
-                      print('success');
-                    } catch (e) {
-                      print('hata ${e.toString()}');
-                    }
-                    isLoading = false;
+                    setState(() {
+                      isLoading = true;
+                    });
 
-                    setState(() {});
+                    try {
+                      await updateProduct(product);
+                      // العودة مع إشارة نجاح التحديث
+                      Navigator.pop(context, true);
+                    } catch (e) {
+                      // في حالة وجود خطأ
+                      ScaffoldMessenger.of(context).showSnackBar(
+                        SnackBar(content: Text('Error updating product: $e')),
+                      );
+                    } finally {
+                      setState(() {
+                        isLoading = false;
+                      });
+                    }
                   },
                 ),
               ],
