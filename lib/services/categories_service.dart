@@ -7,6 +7,7 @@ class CategoriesService {
   }) async {
     List<dynamic> data = await Api().get(
       url: 'https://fakestoreapi.com/products/category/$categoryName',
+      token: '',
     );
 
     List<ProductModel> productsList = [];
