@@ -5,7 +5,7 @@ class AddProduct {
   Future<ProductModel> addProduct({
     required String title,
     required String price,
-    required String description,
+    required String desc,
     required String image,
     required String category,
   }) async {
@@ -14,7 +14,7 @@ class AddProduct {
       body: {
         'title': title,
         'price': price,
-        'description': description,
+        'description': desc,
         'image': image,
         'category': category,
       },

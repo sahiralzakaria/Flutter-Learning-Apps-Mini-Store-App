@@ -46,9 +46,9 @@ class CustomCard extends StatelessWidget {
           ),
         ),
         Positioned(
-          top: -60,
+          top: -50,
           right: 7,
-          child: Image.asset('assets/1.png', height: 130),
+          child: Image.network(product.image, height: 100, width: 100),
         ),
       ],
     );
