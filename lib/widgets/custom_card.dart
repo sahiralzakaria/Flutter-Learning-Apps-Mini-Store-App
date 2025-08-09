@@ -9,8 +9,6 @@ class CustomCard extends StatelessWidget {
       clipBehavior: Clip.none,
       children: [
         Container(
-          height: 160,
-          width: 220,
           decoration: BoxDecoration(
             boxShadow: [
               BoxShadow(

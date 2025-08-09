@@ -20,7 +20,10 @@ class HomePage extends StatelessWidget {
       ),
 
       body: GridView.builder(
-        gridDelegate: gridDelegate,
+        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+          crossAxisCount: 2,
+          childAspectRatio: 0.5,
+        ),
         itemBuilder: (context, builder) {
           return CustomCard();
         },
