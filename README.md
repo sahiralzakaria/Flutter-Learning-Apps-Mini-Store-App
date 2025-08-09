@@ -38,10 +38,29 @@ This app is designed to help beginners understand how to fetch and display data 
 
 ```
 lib/
-├── models/           # Data models (e.g., Product model)
-├── pages/            # Screens: home, product details
-├── widgets/          # Custom UI components
-├── main.dart         # App entry point
+├── helper/                   # Helper classes and functions
+│   └── api.dart               # API request handler
+│
+├── models/                   # Data models
+│   └── product_model.dart     # Product data model
+│
+├── screens/                  # App screens
+│   ├── home_page.dart         # Main product listing page
+│   └── update_product_page.dart # Page to update product details
+│
+├── services/                 # API service classes
+│   ├── add_product.dart       # Service to add a product
+│   ├── all_categories_service.dart  # Get all categories
+│   ├── categories_service.dart      # Get products by category
+│   ├── get_all_product_service.dart # Get all products
+│   └── update_product.dart    # Service to update product info
+│
+├── widgets/                  # Reusable custom widgets
+│   ├── custom_button.dart     # Styled button widget
+│   ├── custom_card.dart       # Product card widget
+│   └── custom_text_field.dart # Custom input field
+│
+└── main.dart                  # App entry point
 ```
 
 ---
