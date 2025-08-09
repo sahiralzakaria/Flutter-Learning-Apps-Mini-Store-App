@@ -18,7 +18,7 @@ class HomePage extends StatelessWidget {
           ),
         ],
         backgroundColor: Colors.white,
-        title: Text('New Trend'),
+        title: Text('Mini Store'),
       ),
 
       body: Padding(
@@ -45,9 +45,7 @@ class HomePage extends StatelessWidget {
                 },
               );
             } else {
-              return Center(
-                child: Text("data ::: ${snapshot.data.toString()}"),
-              );
+              return Center(child: CircularProgressIndicator());
             }
           },
         ),
