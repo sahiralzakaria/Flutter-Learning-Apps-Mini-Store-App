@@ -19,16 +19,20 @@ class HomePage extends StatelessWidget {
         title: Text('New Trend'),
       ),
 
-      body: GridView.builder(
-        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount: 2,
-          childAspectRatio: 1.5,
-          mainAxisSpacing: 60,
-          crossAxisSpacing: 15,
+      body: Padding(
+        padding: const EdgeInsets.only(right: 16, left: 16, top: 60),
+        child: GridView.builder(
+          clipBehavior: Clip.none,
+          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+            crossAxisCount: 2,
+            childAspectRatio: 1.4,
+            mainAxisSpacing: 60,
+            crossAxisSpacing: 15,
+          ),
+          itemBuilder: (context, builder) {
+            return CustomCard();
+          },
         ),
-        itemBuilder: (context, builder) {
-          return CustomCard();
-        },
       ),
     );
   }
