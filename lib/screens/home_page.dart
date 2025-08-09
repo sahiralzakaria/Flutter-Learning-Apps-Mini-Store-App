@@ -19,7 +19,12 @@ class HomePage extends StatelessWidget {
         title: Text('New Trend'),
       ),
 
-      body: Center(child: CustomCard()),
+      body: GridView.builder(
+        gridDelegate: gridDelegate,
+        itemBuilder: (context, builder) {
+          return CustomCard();
+        },
+      ),
     );
   }
 }
