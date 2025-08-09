@@ -72,24 +72,13 @@ class _UpdateProductPageState extends State<UpdateProductPage> {
                   color: Colors.deepPurple,
                   text: "Update",
                   onTap: () async {
+                    isLoading = true;
+                    await updateProduct(product);
                     setState(() {
-                      isLoading = true;
+                      isLoading = false;
                     });
 
-                    try {
-                      await updateProduct(product);
-                      // العودة مع إشارة نجاح التحديث
-                      Navigator.pop(context, true);
-                    } catch (e) {
-                      // في حالة وجود خطأ
-                      ScaffoldMessenger.of(context).showSnackBar(
-                        SnackBar(content: Text('Error updating product: $e')),
-                      );
-                    } finally {
-                      setState(() {
-                        isLoading = false;
-                      });
-                    }
+                    Navigator.pop(context);
                   },
                 ),
               ],
