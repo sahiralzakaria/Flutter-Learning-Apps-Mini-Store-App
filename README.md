@@ -24,6 +24,7 @@ This app is designed to help beginners understand how to fetch and display data 
   <img src="assets/temp/3.png" width="250" />
 </p>
 
+
 ---
 
 
