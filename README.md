@@ -7,7 +7,6 @@ This app is designed to help beginners understand how to fetch and display data 
 
 ## 🚀 Features
 
-
 - 🛍️ Display products in an organized and attractive layout  
 - 📄 Product detail page for each item  
 - 🌐 Fetch product data from an API  
