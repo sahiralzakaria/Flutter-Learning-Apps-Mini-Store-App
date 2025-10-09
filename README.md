@@ -37,6 +37,7 @@ This app is designed to help beginners understand how to fetch and display data 
 
 ## 📂 Project Structure
 
+
 ```
 lib/
 ├── helper/                   # Helper classes and functions
