@@ -16,7 +16,6 @@ This app is designed to help beginners understand how to fetch and display data 
 
 ---
 
-
 ## 📸 App Screenshots
 
 <p align="center">
